@@ -1,0 +1,30 @@
+.banner {
+    background: #dedede;
+    padding: 4rem 0;
+}
+
+.shop__product-container {
+    justify-content: center;
+}
+
+.products-container {
+    padding-top: 3rem;
+    gap: 2rem;
+    display: grid !important;
+    grid-template-columns: repeat(3, auto);
+}
+
+.products-container .product-container img {
+    width: 100%;
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1000px) {
+    .products-container {
+        grid-template-columns: auto;
+    }
+}

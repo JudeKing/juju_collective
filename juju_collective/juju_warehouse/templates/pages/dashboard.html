@@ -1,0 +1,48 @@
+{% include "storefront_parts/header.html" %}
+{% load static %}
+<section class="banner">
+    <div class=" container">
+        <div class="banner-text">
+            <h1 class="banner-text-header">Dashboard</h1>
+            <h3>Add clothing products to the store.</h3>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="register-text">
+        <h1>Add Products</h1>
+        <hr>
+
+    <!-- Product Form -->
+        <form class="register-form" method="post" action="{% url 'client:add_product' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="product_name">{{ form.product_name.label_tag }}</label>
+            {{ form.product_name }}
+            {{ form.product_name.errors }}
+            <label for="product_description">{{ form.product_description.label_tag }}</label>
+            {{ form.product_description }}
+            {{ form.product_description.errors }}
+            <label for="product_price">{{ form.product_price.label_tag }}</label>
+            {{ form.product_price }}
+            {{ form.product_price.errors }}
+            <label for="product_image">{{ form.product_image.label_tag }}</label>
+            {{ form.product_image }}
+            {{ form.product_image.errors }}
+            <button class="join-btn" type="submit">Add Product</button>
+        </form>
+        {% if messages %}
+            <div class="form-notification success-notification">
+                <div class="icon-container">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <div class="notification-message">
+                    {% for message in messages %}
+                    {{message}}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+{% include "storefront_parts/footer.html" %}

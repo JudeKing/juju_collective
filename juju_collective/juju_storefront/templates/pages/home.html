@@ -1,0 +1,92 @@
+{% include 'storefront_parts/header.html' %}
+{% load static %}
+<section class="homepage-container">
+    <div class="homepage container">
+        <div class="banner-text">
+            <h1>REAL CLOTHES <br>FOR REAL PEOPLE.</h1>
+            <div class="banner-link">
+                <a href="{% url 'storefront:shop' %}"><h3>Transform your wardrobe<i class="fa-solid fa-arrow-trend-down"></i></h3>
+                </a>
+            </div>
+
+        </div>
+        <img class="banner" src="{% static 'images/homepage-banner.jpg' %}" alt="">
+    </div>
+</section>
+
+<section class="about-container">
+    <div class="about container">
+        <div class="about-wrapper">
+            <div class="about-desc">
+                <h1 class="big-text-header">About us.</h1>
+                <p>
+                    Juju Collective is a vibrant fashion destination offering a curated collection of unique and stylish clothing pieces. We believe in expressing individuality through fashion and empowering our customers to embrace their personal style.
+                </p>
+                <p>Discover our carefully selected range of trendy garments, accessories, and statement pieces that will elevate your wardrobe. Join the Juju Collective and unleash your inner fashionista!</p>
+            </div>
+    
+            <div class="about-ideals container">
+                <div class="about-ideal-col">
+                    <img src="{% static 'images/identity-img.jpg' %}" alt="">
+                    <div class="about-ideal-title">
+                        <h2>Identity</h2>
+                    </div>
+                    <div class="about-ideal-text-wrapper">
+                        <div class="about-ideal-desc-title">
+                            <h2>Identity</h2>
+                        </div>
+                        <div class="about-ideal-desc">
+                            <p>Juju Collective isn't just clothing; it's a statement of who you are. Each piece is thoughtfully designed to resonate with your unique personality, allowing you to express your true self effortlessly. Whether it's bold prints or subtle designs, Juju Collective enhances your individuality.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-ideal-col">
+                    <img src="{% static 'images/craftsmanship-img.jpg' %}" alt="">
+                    <div class="about-ideal-title">
+                        <h2>Craftsmanship</h2>
+                    </div>
+                    <div class="about-ideal-text-wrapper">
+                        <div class="about-ideal-desc-title">
+                            <h2>Craftsmanship</h2>
+                        </div>
+                        <div class="about-ideal-desc">
+                            <p>Every garment from Juju Collective embodies a commitment to quality and detail. The brand prioritizes superior fabrics, precise tailoring, and sustainable practices. Wearing Juju Collective means embracing well-crafted pieces that stand the test of time, offering both style and substance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-ideal-col">
+                    <div class="about-ideal-title">
+                        <h2>Culture</h2>
+                    </div>
+                    <img src="{% static 'images/culture-img.jpg' %}" alt="">
+                    <div class="about-ideal-text-wrapper">
+                        <div class="about-ideal-desc-title">
+                            <h2>Culture</h2>
+                        </div>
+                        <div class="about-ideal-desc">
+                            <p>Juju Collective celebrates the rich tapestry of cultures and traditions. The designs are inspired by global influences, yet they remain deeply rooted in local heritage. By choosing Juju Collective, you wear a piece of culture that connects you to a broader community, making every outfit a meaningful experience.</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="join-us">
+    <div class="join-us container">
+        <div class="join-us-wrapper">
+            <h1 class="big-text-header">Join Us!</h1>
+            <p>At Juju Collective, working here is more than just a job; it's a chance to immerse yourself in a world where creativity and passion drive everything we do. </p>
+            <p> Our team is made up of individuals who are not only skilled but also deeply committed to pushing the boundaries of fashion and design. When you join us, you step into an environment that thrives on innovation and encourages you to bring your unique ideas to the table.</p>
+            <p> We believe that great ideas can come from anyone, so whether you're on the design floor or in marketing, your contributions are valued and celebrated.</p>
+            <p>We have a position available for lead administrator, follow the link below if interested!</p>
+            <a class="join-btn" href="{% url 'client:register' %}">Register</a>
+        </div>
+
+    </div>
+</section>
+
+{% include 'storefront_parts/footer.html' %}

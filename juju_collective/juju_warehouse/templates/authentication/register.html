@@ -1,0 +1,58 @@
+{% include "storefront_parts/header.html" %}
+{% load static %}
+<section class="banner">
+    <div class=" container">
+        <div class="banner-text">
+            <h1 class="banner-text-header">Register</h1>
+            <h3>Register to become a lead administrator!</h3>
+        </div>
+    </div>
+</section>
+<section class="container register">
+    <div class="register-text">
+        <h1>Lead Administrator</h1>
+        <hr>
+        <form class="register-form" action="" method="POST">
+            {% csrf_token %}
+            <label for="username">{{ form.username.label_tag }}</label>
+            {{ form.username }}
+            {% if form.username.errors %}
+            <div class="form-notification failure-notification">
+                <div class="icon-container">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="notification-message">
+                    {{ form.username.errors }}
+                </div>
+            </div>
+            {% endif %}
+            <label for="password1">{{ form.password1.label_tag }}</label>
+            {{ form.password1 }}
+            {% if form.password1.errors %}
+            <div class="form-notification failure-notification">
+                <div class="icon-container">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="notification-message">
+                    {{ form.password1.errors }}
+                </div>
+            </div>
+            {% endif %}
+            <label for="password2">{{ form.password2.label_tag }}</label>
+            {{ form.password2 }}
+            {% if form.password2.errors %}
+            <div class="form-notification failure-notification">
+                <div class="icon-container">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="notification-message">
+                    {{ form.password2.errors }}
+                </div>
+            </div>
+            {% endif %}
+            <button class="join-btn" type="submit">Register</button>
+        </form>
+    </div>
+    <img src="{% static 'images/admin.jpg' %}" alt="Admin">
+</section>
+{% include "storefront_parts/footer.html" %}

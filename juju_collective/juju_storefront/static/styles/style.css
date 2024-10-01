@@ -1,0 +1,22 @@
+@import url(./utilities.css);
+@import url(./navbar.css);
+@import url(./home.css);
+@import url(./footer.css);
+@import url(./shop.css);
+@import url(./form.css);
+@import url(./client.css);
+
+
+html, body {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+.juju-logo {
+    font-family: 'Oxanium', sans-serif;
+}

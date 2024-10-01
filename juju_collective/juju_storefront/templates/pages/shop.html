@@ -1,0 +1,24 @@
+{% include 'storefront_parts/header.html' %}
+<section class="banner">
+    <div class=" container">
+        <div class="banner-text">
+            <h1 class="banner-text-header ">Take a look around! </h1>
+            <h2>We do not have the ability to sell online yet, but take a look at our catalogue in the meantime.</h2>
+        </div>
+
+    </div>
+</section>
+<section class="shop__product-container container">
+    <div class="products-container">
+        {% for product in products %}
+        <div class="product-container">
+            <img src="{{product.product_image.url}}" alt="{{product.product_name}}">
+            <h2>{{ product.product_name}}</h2>
+            <p>{{product.product_description}}</p>
+            <p>R{{product.product_price}}</p>
+        </div>
+        {% endfor%}
+    </div>
+</section>
+
+{% include 'storefront_parts/footer.html' %}

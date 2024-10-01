@@ -1,0 +1,197 @@
+.homepage-container {
+    background: #dedede;
+    position: relative;
+    height: 75vh;
+    padding-top: 10rem;
+}
+
+.homepage .banner {
+    position: absolute;
+    z-index: 0;
+    top: 5%;
+    right: 10%;
+    width: 25rem;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.banner-text h1 {
+    font-size: 6rem;
+    z-index: 1;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.homepage .banner-link {
+    position: relative;
+    display: inline-block;
+}
+
+.homepage .banner-link a {
+    text-decoration: none;
+}
+
+.homepage .banner-link h3 {
+    color: black;
+    transition: 200ms ease-in-out;
+}
+
+
+.homepage .banner-link i {
+    position: absolute;
+    right: -4rem;
+    bottom: 0;
+    font-size: 2rem;
+    transition: 200ms ease-in-out;
+}
+
+.homepage .banner-link:hover h3{
+    text-decoration: underline;
+}
+
+.homepage .banner-link:hover i {
+    transform: scale(1.8);
+    bottom: -1rem;
+    right: -5rem
+}
+
+.about .about-desc h1 {
+    font-size: 4rem;
+}
+
+.about-desc p {
+    width: 50%;
+}
+
+.about-ideals {
+    padding: 4rem 0;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.about-ideal-title {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    padding-left: 1rem;
+    color: white;
+    backdrop-filter: blur(2px);
+    width: 100%;
+    font-size: 1.3rem;
+    transition: 200ms ease-in-out;
+}
+
+.about-ideal-col {
+    position: relative;
+    width: 33.33%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    overflow: hidden;
+}
+
+.about-ideal-col img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.about-ideal-text-wrapper {
+    z-index: 2;
+    position: relative;
+    padding: 1rem;
+    color: black;
+    bottom: -100%;
+    transition: 200ms ease-in-out;
+    border-radius: 1rem;
+}
+
+.about-ideal-text-wrapper h2, p {
+    position: relative;
+    z-index: 3;
+}
+
+.about-ideal-text-wrapper:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 0;
+    border-radius: 1rem;
+}
+
+/* ABOUT HOVER */
+
+.about-ideal-col:hover .about-ideal-text-wrapper{
+    bottom: 0;
+}
+
+.join-us {
+    text-align: center
+}
+
+.join-us h1 {
+    font-size: 2rem;
+}
+
+.join-btn {
+    color: inherit;
+    padding: 0.7rem 1.5rem;
+    border: 1px solid black;
+    border-radius: 10rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: 200ms ease-in-out;
+    display: inline-block;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.join-btn:hover {
+    background: black;
+    color: white;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1000px) {
+
+    .homepage .banner {
+        width: 100%;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        max-height: unset;
+        position: absolute;
+        padding-top: 0;
+        background: unset;
+    }
+
+
+    .homepage .banner-text {
+        z-index: 5;
+        position: relative;
+        backdrop-filter: blur(2px);
+    }
+
+    .homepage .banner-text h1 {
+        font-size: 3rem;
+    }
+
+    .about-ideal-col {
+        width: 100%;
+    }
+
+    
+    .about-desc p {
+        width: 100%;
+    }
+}

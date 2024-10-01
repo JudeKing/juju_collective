@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    max-width: 1440px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-right: 4rem;
+    padding-left: 4rem; 
+}
+
+.banner-text-header {
+    font-size: 6rem !important;
+}
+
+.big-text-header {
+    font-size: 4rem !important;
+}
+
+.center-aligned {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1000px){
+    .banner-text-header {
+        font-size: 3rem !important;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

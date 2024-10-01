@@ -1,0 +1,49 @@
+<section class="footer-container">
+    <div class="footer container">
+        <div class="footer-logo__container">
+            <h1 class="juju-logo">JUJU</h1>
+        </div>
+        <div class="footer__contact center-aligned">
+            <h1>Reach out!</h1>
+            <h4>Location: Corner of Kofi Annan & Thaba Bosu roads Thetsane Precinct Maseru, 100, Lesotho</h4>
+            <h4>Phone: +26 622311732</h4>
+            <h4>Email: support@jujucollective.co.za</h4>
+
+        </div>
+        <div class="footer__nav-container center-aligned">
+            <h1>Find your way around</h1>
+
+            <nav class="footer-navbar">
+                <a href="{% url 'storefront:home' %}">Home</a>
+                <a href="{% url 'storefront:shop' %}">Shop</a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'client:logout_user'%}">Logout</a>
+                {% else %}
+                    <a href="{% url 'client:login_user'%}">Login</a>
+                {% endif %}
+            </nav>
+        </div>
+    </div>
+    <div class="footer__meta">
+        <div class="footer__meta-wrapper container">
+            <div class="footer__social-links">
+                <a target=_blank href="https://www.instagram.com/kfclesotho/?hl=en">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a target=_blank href="https://www.facebook.com/LesothoKFC/">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a target=_blank href="https://x.com/KFC_Lesotho">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+            </div>
+            <div class="footer__copyright">
+                <p>Copyright &copy 2022-2024</p>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+</body>
+</html>
