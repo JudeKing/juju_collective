@@ -5,18 +5,16 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
-
 import os
 import sys
 import django
-
 sys.path.insert(0, os.path.abspath('..'))
 os.environ['DJANGO_SETTINGS_MODULE'] = 'juju_collective.settings'
 django.setup()
 
 project = 'juju_collective'
-copyright = '2024, Jude'
-author = 'Jude'
+copyright = '2024, Jude King'
+author = 'Jude King'
 release = '00.00.01'
 
 # -- General configuration ---------------------------------------------------
