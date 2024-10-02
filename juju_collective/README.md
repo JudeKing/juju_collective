@@ -53,11 +53,13 @@ juju_collective/
 ### Steps
 
 1. **Clone the repository:**
-`git clone https://github.com/JudeKing/juju-collective.git`
+`git clone https://github.com/JudeKing/juju_collective.git`
 
 2. **Set up a virtual environment:**
-`python -m venv venv
-venv\Scripts\activate source # On Mac: venv/bin/activate`
+```
+python -m venv venv
+venv\Scripts\activate # On Mac: source venv/bin/activate
+```
 
 3. **Install dependencies:**
 `pip install -r requirements.txt`
@@ -80,8 +82,10 @@ venv\Scripts\activate source # On Mac: venv/bin/activate`
 ## Docker Setup
 
 1. **Build and run the Docker container:**
-`docker build -t juju_collective .
-docker run -d -p 8000:8000 juju_collective`
+```
+docker build -t juju_collective .
+docker run -d -p 8000:8000 juju_collective
+```
 2. **Access the application:** The app will be accessible at `http://localhost:8000` inside your browser.
 
 ---
@@ -95,10 +99,10 @@ The project uses **Sphinx** to generate documentation. To build the HTML documen
 `pip install sphinx`
 
 2. Navigate to the documentation directory (if available) and build the documentation:
-`
+```
 cd docs
 .\make.bat html # On Mac: make html
-`
+```
 
 The generated documentation will be located in the `_build/html/` folder.
 
