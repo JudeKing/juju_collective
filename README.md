@@ -55,19 +55,22 @@ juju_collective/
 1. **Clone the repository:**
 `git clone https://github.com/JudeKing/juju_collective.git`
 
-2. **Set up a virtual environment:**
+2. **cd into juju_collective directory:**
+`cd juju_collective`
+
+4. **Set up a virtual environment:**
 ```
 python -m venv venv
 venv\Scripts\activate # On Mac: source venv/bin/activate
 ```
 
-3. **Install dependencies:**
+4. **Install dependencies:**
 `pip install -r requirements.txt`
 
-4. **Run migrations:**
+5. **Run migrations:**
 `python manage.py migrate`
 
-5. **Run the development server:**
+6. **Run the development server:**
 `python manage.py runserver`
 
 ---
